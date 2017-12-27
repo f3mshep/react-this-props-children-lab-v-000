@@ -2,9 +2,10 @@
 import React from 'react';
 class ThemedDecoration extends React.Component {
     render(){
+        let newTheme =  this.props.theme
         const addedClass = React.Children.map(this.props.children, child =>{
-            
-            return( <div className="theme">{child}</div> )
+
+            return( <div className= {newTheme} >{child}</div> )
         })
         return(
             <div>{addedClass}</div>
